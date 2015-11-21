@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicClassifier.cs" />
+    <Compile Include="CountClassifier.cs" />
     <Compile Include="DataAccess.cs" />
+    <Compile Include="EuclideanDistance.cs" />
     <Compile Include="Evaluator.cs" />
     <Compile Include="IClassifier.cs" />
     <Compile Include="IDistance.cs" />

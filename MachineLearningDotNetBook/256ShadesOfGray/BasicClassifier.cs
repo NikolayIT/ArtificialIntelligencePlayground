@@ -4,28 +4,28 @@
 
     public class BasicClassifier : IClassifier
     {
-        private readonly IDistance distance;
+        protected readonly IDistance Distance;
 
-        private IEnumerable<Observation> data;
+        protected IEnumerable<Observation> Data;
 
         public BasicClassifier(IDistance distance)
         {
-            this.distance = distance;
+            this.Distance = distance;
         }
 
         public void Train(IEnumerable<Observation> trainingSet)
         {
-            this.data = trainingSet;
+            this.Data = trainingSet;
         }
 
-        public string Predict(int[] pixels)
+        public virtual string Predict(int[] pixels)
         {
             Observation currentBest = null;
             var shortest = double.MaxValue;
 
-            foreach (var obs in this.data)
+            foreach (var obs in this.Data)
             {
-                var dist = this.distance.Between(obs.Pixels, pixels);
+                var dist = this.Distance.Between(obs.Pixels, pixels);
                 if (dist < shortest)
                 {
                     shortest = dist;

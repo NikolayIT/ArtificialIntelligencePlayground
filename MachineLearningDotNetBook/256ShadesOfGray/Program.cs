@@ -6,8 +6,8 @@
     {
         public static void Main()
         {
-            IDistance distance = new ManhattanDistance();
-            IClassifier classifier = new BasicClassifier(distance);
+            IDistance distance = new EuclideanDistance();
+            IClassifier classifier = new CountClassifier(distance, 3200000);
 
             var trainingPath = @"..\..\..\Data\trainingsample.csv";
             var training = DataReader.ReadObservations(trainingPath);
