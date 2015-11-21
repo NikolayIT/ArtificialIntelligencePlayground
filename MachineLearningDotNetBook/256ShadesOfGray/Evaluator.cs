@@ -7,7 +7,7 @@
     {
         public static double Correct(IEnumerable<Observation> validationSet, IClassifier classifier)
         {
-            return validationSet.Select(obs => Score(obs, classifier)).Average();
+            return validationSet.AsParallel().Select(obs => Score(obs, classifier)).Average();
         }
 
         private static double Score(Observation obs, IClassifier classifier)
