@@ -6,8 +6,8 @@
     {
         public static void Main()
         {
-            var distance = new ManhattanDistance();
-            var classifier = new BasicClassifier(distance);
+            IDistance distance = new ManhattanDistance();
+            IClassifier classifier = new BasicClassifier(distance);
 
             var trainingPath = @"..\..\..\Data\trainingsample.csv";
             var training = DataReader.ReadObservations(trainingPath);

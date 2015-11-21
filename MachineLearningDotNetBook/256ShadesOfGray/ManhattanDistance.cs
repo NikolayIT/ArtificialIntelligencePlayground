@@ -2,8 +2,6 @@
 {
     using System;
 
-    using CSharp;
-
     public class ManhattanDistance : IDistance
     {
         public double Between(int[] pixels1, int[] pixels2)
@@ -17,7 +15,7 @@
 
             var distance = 0;
 
-            for (int i = 0; i < length; i++)
+            for (var i = 0; i < length; i++)
             {
                 distance += Math.Abs(pixels1[i] - pixels2[i]);
             }

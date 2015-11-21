@@ -4,10 +4,19 @@
     using System.IO;
     using System.Linq;
 
-    using CSharp;
-
-    public class DataReader
+    public static class DataReader
     {
+        public static Observation[] ReadObservations(string dataPath)
+        {
+            var data =
+                File.ReadAllLines(dataPath)
+                .Skip(1)
+                .Select(ObservationFactory)
+                .ToArray();
+
+            return data;
+        }
+
         private static Observation ObservationFactory(string data)
         {
             var commaSeparated = data.Split(',');
@@ -19,17 +28,6 @@
                 .ToArray();
 
             return new Observation(label, pixels);
-        }
-
-        public static Observation[] ReadObservations(string dataPath)
-        {
-            var data =
-                File.ReadAllLines(dataPath)
-                .Skip(1)
-                .Select(ObservationFactory)
-                .ToArray();
-
-            return data;
         }
     }
 }

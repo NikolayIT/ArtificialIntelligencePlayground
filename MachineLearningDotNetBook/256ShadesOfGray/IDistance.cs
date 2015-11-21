@@ -1,4 +1,4 @@
-﻿namespace CSharp
+﻿namespace _256ShadesOfGray
 {
     public interface IDistance
     {

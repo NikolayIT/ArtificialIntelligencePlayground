@@ -9,6 +9,7 @@
         }
 
         public string Label { get; private set; }
+
         public int[] Pixels { get; private set; }
     }
 }

@@ -1,15 +1,12 @@
 ﻿namespace _256ShadesOfGray
 {
-    using System;
     using System.Collections.Generic;
-
-    using CSharp;
 
     public class BasicClassifier : IClassifier
     {
-        private IEnumerable<Observation> data;
-
         private readonly IDistance distance;
+
+        private IEnumerable<Observation> data;
 
         public BasicClassifier(IDistance distance)
         {
@@ -24,9 +21,9 @@
         public string Predict(int[] pixels)
         {
             Observation currentBest = null;
-            var shortest = Double.MaxValue;
+            var shortest = double.MaxValue;
 
-            foreach (Observation obs in this.data)
+            foreach (var obs in this.data)
             {
                 var dist = this.distance.Between(obs.Pixels, pixels);
                 if (dist < shortest)
@@ -36,7 +33,7 @@
                 }
             }
 
-            return currentBest.Label;
+            return currentBest?.Label;
         }
     }
 }

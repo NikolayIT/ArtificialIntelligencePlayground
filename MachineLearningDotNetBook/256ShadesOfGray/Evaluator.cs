@@ -3,27 +3,16 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    using CSharp;
-
-    public class Evaluator
+    public static class Evaluator
     {
-        public static double Correct(
-            IEnumerable<Observation> validationSet,
-            BasicClassifier classifier)
+        public static double Correct(IEnumerable<Observation> validationSet, IClassifier classifier)
         {
-            return validationSet
-                .Select(obs => Score(obs, classifier))
-                .Average();
+            return validationSet.Select(obs => Score(obs, classifier)).Average();
         }
 
-        private static double Score(
-            Observation obs,
-            IClassifier classifier)
+        private static double Score(Observation obs, IClassifier classifier)
         {
-            if (classifier.Predict(obs.Pixels) == obs.Label)
-                return 1.0;
-            else
-                return 0.0;
+            return classifier.Predict(obs.Pixels) == obs.Label ? 1.0 : 0.0;
         }
     }
 }
