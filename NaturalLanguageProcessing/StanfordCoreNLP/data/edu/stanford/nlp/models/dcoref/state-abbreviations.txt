@@ -1,0 +1,50 @@
+Alabama	Ala.	AL
+Alaska	AK
+Arizona	Ariz.	Az.	AZ	
+Arkansas	Ark.	AR
+California	Calif.	Ca.	CA
+Colorado	Colo.	CO
+Connecticut	Conn.	Ct.	CT
+Delaware	Del.	DE
+Florida	Fla.	FL
+Georgia	Ga.	GA
+Hawaii	HI
+Idaho	ID
+Illinois	Ill.	IL
+Indiana	Ind.	IN
+Iowa	IA
+Kansas	Kan.	Kans.	KS
+Kentucky	Ky.	KY
+Louisiana	La.	LA
+Maine	ME
+Maryland	Md.	MD
+Massachusetts	Mass.	MA
+Michigan	Mich.	MI
+Minnesota	Minn.	MN
+Mississippi	Miss.	MS
+Missouri	Mo.	MO
+Montana	Mont.	MT
+Nebraska	Neb.	Nebr.	NE
+Nevada	Nev.	NV
+New Hampshire	N.H.	NH
+New Jersey	N.J.	NJ
+New Mexico	N.M.	N.Mex.	N. Mex.	NM
+New York	N.Y.	NY
+North Carolina	N.C.	NC
+North Dakota	N. Dak.	N.Dak.	N.D.	ND
+Ohio	OH
+Oklahoma	Okla.	OK
+Oregon	Ore.	OR
+Pennsylvania	Pa.	Penn.	PA
+Rhode Island	R.I.	RI
+South Carolina	S.C.	SC
+South Dakota	S.D.	S. Dak.	S.Dak.	SD
+Tennessee	Tenn.	TN
+Texas	Tex.	TX
+Utah	UT
+Vermont	Vt.	VT
+Virginia	Va.	VA
+Washington	Wash.	WA
+West Virginia	W.Va.	W. Va.	WV
+Wisconsin	Wis.	Wisc.	WI
+Wyoming	Wyo.	WY
