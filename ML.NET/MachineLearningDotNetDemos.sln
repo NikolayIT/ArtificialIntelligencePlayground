@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Binary Classification", "Binary Classification", "{AAFDB102-6291-40E4-BBCA-DC27EC30FA4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Multi-class Classification", "Multi-class Classification", "{D2056778-0E8F-4410-B63B-493D56910441}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recommendation", "Recommendation", "{EF141B78-9A51-41C5-8EAF-9FD33ADDF84B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Regression", "Regression", "{1947B2AB-DB16-46CF-8046-20233D4CC884}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clustering", "Clustering", "{D2C015BE-CDAE-41A9-95E9-C4344BAF36E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Anomaly Detection", "Anomaly Detection", "{4DC31086-D4CE-41B3-A84B-D7DDF5554CE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Computer Vision", "Computer Vision", "{1F0D33E3-795E-4AC1-8586-2C5B62D08BF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BulgarianJokesClassification", "Multi-class Classification\BulgarianJokesClassification\BulgarianJokesClassification.csproj", "{03635F3E-210A-4FE9-8400-6C5833F63DAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03635F3E-210A-4FE9-8400-6C5833F63DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03635F3E-210A-4FE9-8400-6C5833F63DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03635F3E-210A-4FE9-8400-6C5833F63DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03635F3E-210A-4FE9-8400-6C5833F63DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{03635F3E-210A-4FE9-8400-6C5833F63DAB} = {D2056778-0E8F-4410-B63B-493D56910441}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F679EB71-B549-4032-BB67-BD9F1AEC1203}
+	EndGlobalSection
+EndGlobal
