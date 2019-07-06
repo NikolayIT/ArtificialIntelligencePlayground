@@ -10,16 +10,11 @@
     {
         public static void Main()
         {
-            // var jokes = new DataGatherer().GatherData(1, 47000);
-
             /*
-             * -- 24771 jokes in the data file. Source:
-             * SELECT j.Id, c.[Name],
-             * REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE([Content], CHAR(13), ''), CHAR(10), ' '), '.', ' '), ',', ' '), '-', ' '), '"', ' '), ':', ' '), '?', ' '), '!', ' ') AS [Content]
-             * FROM [FunApp].[dbo].[Jokes] j
-             * JOIN [Categories] c ON c.Id = j.CategoryId
-             * WHERE c.Id != 4 -- Разни
-             *       AND (SELECT COUNT(*) FROM Jokes WHERE CategoryId = c.Id) >= 20 -- at least 20 jokes in the category
+             * 24771 jokes in the data file (jokes-train-data.csv)
+             * Source: var jokes = new DataGatherer().GatherData(1, 47000);
+             * Removed category "Разни"
+             * Removed categories with less than 20 jokes
              */
 
             Console.OutputEncoding = Encoding.UTF8;

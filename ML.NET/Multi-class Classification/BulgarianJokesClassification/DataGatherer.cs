@@ -6,7 +6,7 @@
     using System.Text;
     using System.Threading;
 
-    using AngleSharp.Parser.Html;
+    using AngleSharp.Html.Parser;
 
     public class DataGatherer
     {
@@ -39,7 +39,7 @@
                     continue;
                 }
 
-                var document = parser.Parse(html);
+                var document = parser.ParseDocument(html);
                 var jokeContent = document.QuerySelector("#newsbody")?.TextContent?.Trim();
                 var categoryName = document.QuerySelector(".tag-links-left a")?.TextContent?.Trim();
 
