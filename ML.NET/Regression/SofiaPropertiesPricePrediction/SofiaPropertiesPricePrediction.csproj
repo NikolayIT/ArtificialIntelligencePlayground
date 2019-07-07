@@ -8,6 +8,13 @@
   <ItemGroup>
     <PackageReference Include="AngleSharp" Version="0.12.1" />
     <PackageReference Include="Microsoft.ML" Version="1.2.0" />
+    <PackageReference Include="Microsoft.ML.LightGBM" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="imot.bg-2019-07-06.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
