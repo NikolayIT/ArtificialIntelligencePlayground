@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Text;
 
     using Microsoft.ML;
     using Microsoft.ML.Trainers.LightGbm;
@@ -13,7 +14,7 @@
         public static void Main()
         {
             /*
-             * Source:
+             * Source: https://www.imot.bg/
              * var properties = new ImotBgDataGatherer().GatherData(10, 1000).GetAwaiter().GetResult();
              *
              * 24228 records in imot.bg-raw-data-2019-07-06.csv
@@ -22,6 +23,8 @@
              *
              * 16083 records in imot.bg-2019-07-06.csv
              */
+
+            Console.OutputEncoding = Encoding.UTF8;
             var modelFile = "SofiaPropertiesModel.zip";
             TrainModel("imot.bg-2019-07-06.csv", modelFile);
 

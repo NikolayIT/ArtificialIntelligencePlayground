@@ -15,6 +15,10 @@
 
         public static void Main()
         {
+            /*
+             * Source: https://presscenters.com/
+             */
+
             var context = new MLContext(seed: 0);
 
             // load data
@@ -24,15 +28,12 @@
                 hasHeader: true);
 
             // transform options
-            BuildTrainModel(context, dataView);  // using SsaSpikeEstimator
+            BuildTrainModel(context, dataView);
 
             var anomalies = DetectAnomalies(context, dataView);
 
             var days = context.Data.CreateEnumerable<DayInfo>(dataView, reuseRowObject: false).ToArray();
             DrawPlot(days, anomalies.ToList());
-
-            Console.WriteLine("\nPress any key to exit");
-            Console.Read();
         }
 
         private static void BuildTrainModel(MLContext context, IDataView dataView)

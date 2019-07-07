@@ -11,15 +11,18 @@
         public static void Main()
         {
             /*
-             * 24771 jokes in the data file (jokes-train-data.csv)
-             * Source: var jokes = new DataGatherer().GatherData(1, 47000);
+             * Source: https://fun.dir.bg/
+             * var jokes = new DataGatherer().GatherData(1, 47000);
+             *
              * Removed category "Разни"
              * Removed categories with less than 20 jokes
+             *
+             * 24771 jokes in the data file (jokes-train-data.csv)
              */
 
             Console.OutputEncoding = Encoding.UTF8;
             var modelFile = "JokesCategoryModel.zip";
-            //// TrainModel("jokes-train-data.csv", modelFile);
+            TrainModel("jokes-train-data.csv", modelFile);
 
             var testModelData = new List<string>
                                     {
