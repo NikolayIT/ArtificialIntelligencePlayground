@@ -14,5 +14,9 @@
              */
             Console.WriteLine("Hello World!");
         }
+
+        private static void TrainModel(string dataFile, string modelFile)
+        {
+        }
     }
 }

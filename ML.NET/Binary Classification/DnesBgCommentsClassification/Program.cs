@@ -6,8 +6,10 @@ namespace DnesBgCommentsClassification
     {
         static void Main(string[] args)
         {
-            /* Source: 
+            /*
+             * Source: https://www.dnes.bg/
              * var comments = new DnesBgDataGatherer().GatherData(415500, 1).GetAwaiter().GetResult();
+             * All comments: 
              *
              * Positive comments:
              * WHERE [DownVotes] >= 10 AND (1.0 * [UpVotes]) / [DownVotes] <= 0.2   -- down >= 5 * up
