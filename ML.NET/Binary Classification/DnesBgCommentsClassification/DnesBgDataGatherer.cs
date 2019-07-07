@@ -8,7 +8,7 @@
 
     using AngleSharp.Html.Parser;
 
-    public class NewsBgDataGatherer
+    public class DnesBgDataGatherer
     {
         public async Task<IEnumerable<RawComment>> GatherData(int fromNewsId, int toNewsId)
         {

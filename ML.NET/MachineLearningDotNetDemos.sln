@@ -19,9 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Computer Vision", "Computer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BulgarianJokesClassification", "Multi-class Classification\BulgarianJokesClassification\BulgarianJokesClassification.csproj", "{03635F3E-210A-4FE9-8400-6C5833F63DAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnesBgCommentsClassification", "Binary Classification\DnesBgCommentsClassification\DnesBgCommentsClassification.csproj", "{9A28F8FF-0819-455A-AA53-392AECFB4368}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnesBgCommentsClassification", "Binary Classification\DnesBgCommentsClassification\DnesBgCommentsClassification.csproj", "{9A28F8FF-0819-455A-AA53-392AECFB4368}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SofiaPropertiesPricePrediction", "Regression\SofiaPropertiesPricePrediction\SofiaPropertiesPricePrediction.csproj", "{284A2527-9E1C-4298-A63B-33C5FEAF34B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SofiaPropertiesPricePrediction", "Regression\SofiaPropertiesPricePrediction\SofiaPropertiesPricePrediction.csproj", "{284A2527-9E1C-4298-A63B-33C5FEAF34B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BulgarianPressReleasesAnomalyDetection", "Anomaly Detection\BulgarianPressReleasesAnomalyDetection\BulgarianPressReleasesAnomalyDetection.csproj", "{F1601135-7A80-46E5-9A1E-55B01EA281E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{284A2527-9E1C-4298-A63B-33C5FEAF34B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{284A2527-9E1C-4298-A63B-33C5FEAF34B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{284A2527-9E1C-4298-A63B-33C5FEAF34B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1601135-7A80-46E5-9A1E-55B01EA281E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1601135-7A80-46E5-9A1E-55B01EA281E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1601135-7A80-46E5-9A1E-55B01EA281E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1601135-7A80-46E5-9A1E-55B01EA281E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{03635F3E-210A-4FE9-8400-6C5833F63DAB} = {D2056778-0E8F-4410-B63B-493D56910441}
 		{9A28F8FF-0819-455A-AA53-392AECFB4368} = {AAFDB102-6291-40E4-BBCA-DC27EC30FA4B}
 		{284A2527-9E1C-4298-A63B-33C5FEAF34B5} = {1947B2AB-DB16-46CF-8046-20233D4CC884}
+		{F1601135-7A80-46E5-9A1E-55B01EA281E3} = {4DC31086-D4CE-41B3-A84B-D7DDF5554CE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F679EB71-B549-4032-BB67-BD9F1AEC1203}
