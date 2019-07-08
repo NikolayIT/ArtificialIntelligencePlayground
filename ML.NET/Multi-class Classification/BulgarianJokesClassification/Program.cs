@@ -2,6 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
     using System.Text;
 
     using Microsoft.ML;
@@ -22,7 +24,10 @@
 
             Console.OutputEncoding = Encoding.UTF8;
             var modelFile = "JokesCategoryModel.zip";
-            TrainModel("jokes-train-data.csv", modelFile);
+            if (!File.Exists(modelFile))
+            {
+                TrainModel("jokes-train-data.csv", modelFile);
+            }
 
             var testModelData = new List<string>
                                     {
@@ -50,6 +55,7 @@
                 Console.WriteLine(new string('-', 60));
                 Console.WriteLine($"Content: {testData}");
                 Console.WriteLine($"Prediction: {prediction.Category}");
+                Console.WriteLine($"Score: {prediction.Score.Max()}");
             }
         }
 
@@ -70,6 +76,7 @@
             // Create the selected training algorithm/trainer
             Console.WriteLine("Create and configure the selected training algorithm (trainer)");
             var trainer = context.MulticlassClassification.Trainers.SdcaMaximumEntropy(); // SDCA = Stochastic Dual Coordinate Ascent
+            // Alternative: LightGbm (GBM = Gradient Boosting Machine)
 
             // Set the trainer/algorithm and map label to value (original readable state)
             var trainingPipeline = dataProcessPipeline.Append(trainer).Append(

@@ -8,13 +8,11 @@
   <ItemGroup>
     <PackageReference Include="AngleSharp" Version="0.12.1" />
     <PackageReference Include="Microsoft.ML" Version="1.2.0" />
+    <PackageReference Include="Microsoft.ML.LightGBM" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="jokes-train-data.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="JokesCategoryModel.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
