@@ -81,7 +81,7 @@
             foreach (var testInput in testModelData)
             {
                 var prediction = predictionEngine.Predict(testInput);
-                Console.WriteLine($"User: {testInput.UserId}, Course: {testInput.CourseId}, Score: {prediction.Score}, Label: {prediction.Label}");
+                Console.WriteLine($"User: {testInput.UserId}, Course: {testInput.CourseId}, Score: {prediction.Score}");
             }
         }
     }

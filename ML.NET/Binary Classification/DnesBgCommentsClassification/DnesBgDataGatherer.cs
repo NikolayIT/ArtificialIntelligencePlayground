@@ -100,10 +100,6 @@
             public int UpVotes { get; set; }
 
             public int DownVotes { get; set; }
-
-            public int Positiveness => this.UpVotes - this.DownVotes;
-
-            public int TotalVotes => this.UpVotes + this.DownVotes;
         }
     }
 }

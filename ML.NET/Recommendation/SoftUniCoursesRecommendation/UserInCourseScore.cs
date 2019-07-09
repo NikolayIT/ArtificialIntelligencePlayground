@@ -2,8 +2,8 @@
 {
     public class UserInCourseScore
     {
-        public float Label { get; set; }
-
         public float Score { get; set; }
+
+        // public float Label { get; set; }
     }
 }

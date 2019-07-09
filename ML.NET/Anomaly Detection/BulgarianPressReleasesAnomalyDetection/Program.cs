@@ -56,7 +56,7 @@
 
         private static IEnumerable<DayInfo> DetectAnomalies(MLContext context, IDataView dataView)
         {
-            ITransformer trainedModel = context.Model.Load(ModelPath, out var modelInputSchema);
+            ITransformer trainedModel = context.Model.Load(ModelPath, out _);
 
             var transformedData = trainedModel.Transform(dataView);
 
@@ -86,7 +86,7 @@
                 // if (p.Prediction[0] > 0)
                 {
                     Console.WriteLine(
-                        "{0:D}\t{1:0}\t{2:0.00}\t{3:0.00}\t{4:0.00}",
+                        "{0}\t{1:0}\t{2:0.00}\t{3:0.00}\t{4:0.00}",
                         columnDate[i].ToLongDateString().PadRight(25),
                         columnCount[i],
                         p.Prediction[0],
@@ -101,9 +101,9 @@
             return anomalies;
         }
 
-        private static void DrawPlot(IEnumerable<DayInfo> days, IList<DayInfo> anomalies)
+        private static void DrawPlot(IList<DayInfo> days, IList<DayInfo> anomalies)
         {
-            days = days.Where(x => x.Date >= new DateTime(2017, 9, 1) && x.Date <= new DateTime(2017, 9, 30));
+            days = days.Where(x => x.Date >= new DateTime(2017, 9, 1) && x.Date <= new DateTime(2017, 9, 30)).ToList();
             anomalies = anomalies.Where(x => x.Date >= new DateTime(2017, 9, 1) && x.Date <= new DateTime(2017, 9, 30)).ToList();
 
             using (var plot = new PLStream())
@@ -114,7 +114,7 @@
                 plot.init();
                 plot.env(
                     1, // x-axis range
-                    days.Count(),
+                    days.Count,
                     0, // y-axis range
                     150,
                     AxesScale.Independent, // scale x and y independently
@@ -124,7 +124,7 @@
                     "Count", // y-axis label
                     "Press releases September 2017"); // plot title
                 plot.line(
-                    (from x in Enumerable.Range(1, days.Count()) select (double)x).ToArray(),
+                    (from x in Enumerable.Range(1, days.Count) select (double)x).ToArray(),
                     (from p in days select (double)p.Count).ToArray());
 
                 // plot the spikes

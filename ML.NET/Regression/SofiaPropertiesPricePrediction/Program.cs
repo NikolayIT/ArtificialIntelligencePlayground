@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Net;
     using System.Text;
 
     using Microsoft.ML;
@@ -101,34 +100,40 @@
                 var prediction = predictionEngine.Predict(testData);
                 Console.WriteLine(new string('-', 60));
                 Console.WriteLine($"Input: {testData.Dump()}");
-                Console.WriteLine($"Prediction: {prediction.Dump()}");
+                Console.WriteLine($"Prediction: {prediction.Score}");
             }
         }
 
         private static void TrainModel(string dataFile, string modelFile)
         {
-            var mlContext = new MLContext();
-            var trainingDataView = mlContext.Data.LoadFromTextFile<ModelInput>(
+            var context = new MLContext();
+            var trainingDataView = context.Data.LoadFromTextFile<ModelInput>(
                 dataFile,
                 hasHeader: true,
                 separatorChar: ',',
                 allowQuoting: true);
 
             // Data process configuration with pipeline data transformations 
-            var dataProcessPipeline = mlContext.Transforms.Categorical
+            var dataProcessPipeline = context.Transforms.Categorical
                 .OneHotEncoding(
                     new[]
                     {
-                        new InputOutputColumnPair("District", "District"),
-                        new InputOutputColumnPair("Type", "Type"),
-                        new InputOutputColumnPair("BuildingType", "BuildingType")
+                        new InputOutputColumnPair(nameof(ModelInput.District), nameof(ModelInput.District)),
+                        new InputOutputColumnPair(nameof(ModelInput.Type), nameof(ModelInput.Type)),
+                        new InputOutputColumnPair(nameof(ModelInput.BuildingType), nameof(ModelInput.BuildingType))
                     }).Append(
-                    mlContext.Transforms.Concatenate(
-                        "Features",
-                        new[] { "District", "Type", "BuildingType", "Size", "Floor", "TotalFloors", "Year" }));
+                    context.Transforms.Concatenate(
+                        outputColumnName: "Features",
+                        nameof(ModelInput.District),
+                        nameof(ModelInput.Type),
+                        nameof(ModelInput.BuildingType),
+                        nameof(ModelInput.Size),
+                        nameof(ModelInput.Floor),
+                        nameof(ModelInput.TotalFloors),
+                        nameof(ModelInput.Year)));
 
             // Set the training algorithm (GBM = Gradient Boosting Machine)
-            var trainer = mlContext.Regression.Trainers.LightGbm(
+            var trainer = context.Regression.Trainers.LightGbm(
                 new LightGbmRegressionTrainer.Options
                 {
                     NumberOfIterations = 4000,
@@ -142,7 +147,7 @@
                     CategoricalSmoothing = 10,
                     L2CategoricalRegularization = 1,
                     Booster = new GradientBooster.Options { L2Regularization = 0.5, L1Regularization = 0 },
-                    LabelColumnName = "Price",
+                    LabelColumnName = nameof(ModelInput.Price),
                     FeatureColumnName = "Features"
                 });
             var trainingPipeline = dataProcessPipeline.Append(trainer);
@@ -154,7 +159,7 @@
             ////     labelColumnName: "Price");
 
             ITransformer model = trainingPipeline.Fit(trainingDataView);
-            mlContext.Model.Save(model, trainingDataView.Schema, modelFile);
+            context.Model.Save(model, trainingDataView.Schema, modelFile);
         }
 
         private static string Dump(this object obj)
