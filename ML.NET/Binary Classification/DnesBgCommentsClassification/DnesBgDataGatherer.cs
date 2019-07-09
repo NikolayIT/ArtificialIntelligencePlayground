@@ -70,13 +70,13 @@
                         var divToRemove = contentElement.QuerySelector(".feedback_comment");
                         contentElement.RemoveChild(divToRemove);
 
-                        var upVotes = int.Parse(htmlComment.QuerySelector(".comments-grades-up")?.TextContent);
+                        var positiveVotes = int.Parse(htmlComment.QuerySelector(".comments-grades-up")?.TextContent);
                         var downVotes = int.Parse(htmlComment.QuerySelector(".comments-grades-down")?.TextContent);
 
                         var comment = new RawComment
                         {
                             Content = contentElement.TextContent.Trim(),
-                            UpVotes = upVotes,
+                            UpVotes = positiveVotes,
                             DownVotes = downVotes,
                             NewsId = newsId,
                         };

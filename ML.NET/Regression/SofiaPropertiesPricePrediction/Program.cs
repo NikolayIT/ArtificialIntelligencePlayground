@@ -42,7 +42,7 @@
                                         TotalFloors = 6,
                                         Size = 100,
                                         Year = 2017,
-                                        Type = "Тухла"
+                                        Type = "Тухла",
                                     },
                                     new ModelInput
                                     {
@@ -52,7 +52,7 @@
                                         TotalFloors = 6,
                                         Size = 100,
                                         Year = 1980,
-                                        Type = "Тухла"
+                                        Type = "Тухла",
                                     },
                                     new ModelInput
                                     {
@@ -62,7 +62,7 @@
                                         TotalFloors = 6,
                                         Size = 100,
                                         Year = 2017,
-                                        Type = "Тухла"
+                                        Type = "Тухла",
                                     },
                                     new ModelInput
                                     {
@@ -72,7 +72,7 @@
                                         TotalFloors = 6,
                                         Size = 100,
                                         Year = 2017,
-                                        Type = "Тухла"
+                                        Type = "Тухла",
                                     },
                                     new ModelInput
                                     {
@@ -82,7 +82,7 @@
                                         TotalFloors = 6,
                                         Size = 60,
                                         Year = 2017,
-                                        Type = "Тухла"
+                                        Type = "Тухла",
                                     },
                                 };
             testModelData.Dump();
@@ -113,14 +113,14 @@
                 separatorChar: ',',
                 allowQuoting: true);
 
-            // Data process configuration with pipeline data transformations 
+            // Data process configuration with pipeline data transformations
             var dataProcessPipeline = context.Transforms.Categorical
                 .OneHotEncoding(
                     new[]
                     {
                         new InputOutputColumnPair(nameof(ModelInput.District), nameof(ModelInput.District)),
                         new InputOutputColumnPair(nameof(ModelInput.Type), nameof(ModelInput.Type)),
-                        new InputOutputColumnPair(nameof(ModelInput.BuildingType), nameof(ModelInput.BuildingType))
+                        new InputOutputColumnPair(nameof(ModelInput.BuildingType), nameof(ModelInput.BuildingType)),
                     }).Append(
                     context.Transforms.Concatenate(
                         outputColumnName: "Features",
@@ -148,7 +148,7 @@
                     L2CategoricalRegularization = 1,
                     Booster = new GradientBooster.Options { L2Regularization = 0.5, L1Regularization = 0 },
                     LabelColumnName = nameof(ModelInput.Price),
-                    FeatureColumnName = "Features"
+                    FeatureColumnName = "Features",
                 });
             var trainingPipeline = dataProcessPipeline.Append(trainer);
 

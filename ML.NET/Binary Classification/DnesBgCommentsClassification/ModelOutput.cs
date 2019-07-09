@@ -1,4 +1,4 @@
-namespace DnesBgCommentsClassification
+﻿namespace DnesBgCommentsClassification
 {
     using Microsoft.ML.Data;
 

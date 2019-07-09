@@ -63,7 +63,7 @@
                 foreach (var htmlComment in htmlComments)
                 {
                     var content = htmlComment.QuerySelector(".wc-comment-text")?.TextContent;
-                    var upVotes = int.Parse(htmlComment.QuerySelector(".wc-vote-result-like")?.TextContent);
+                    var positiveVotes = int.Parse(htmlComment.QuerySelector(".wc-vote-result-like")?.TextContent);
                     var downVotes = -int.Parse(htmlComment.QuerySelector(".wc-vote-result-dislike")?.TextContent);
                     var createdOn = DateTime.ParseExact(
                         htmlComment.QuerySelector(".wc-comment-date")?.TextContent,
@@ -73,7 +73,7 @@
                     var comment = new RawComment
                     {
                         Content = content,
-                        UpVotes = upVotes,
+                        UpVotes = positiveVotes,
                         DownVotes = downVotes,
                         NewsId = newsId,
                         CreatedOn = createdOn,

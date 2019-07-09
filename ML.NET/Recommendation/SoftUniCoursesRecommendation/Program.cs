@@ -63,7 +63,7 @@
                               LabelColumnName = nameof(UserInCourse.Label),
                               Alpha = 0.1,
                               Lambda = 0.5,
-                              NumberOfIterations = 50
+                              NumberOfIterations = 50,
                           };
 
             var trainerEstimator = estimator.Append(context.Recommendation().Trainers.MatrixFactorization(options));

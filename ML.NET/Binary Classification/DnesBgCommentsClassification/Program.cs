@@ -16,7 +16,7 @@
             /*
              * Source: https://www.dnes.bg/
              * var comments = new DnesBgDataGatherer().GatherData(415500, 1).GetAwaiter().GetResult();
-             * All comments: 
+             * All comments:
              *
              * Positive comments:
              * WHERE [DownVotes] >= 10 AND (1.0 * [UpVotes]) / [DownVotes] <= 0.2   -- down >= 5 * up
@@ -61,7 +61,7 @@
                                     "Причината за многото жертви на пътя не е в курса за обучение, а е в интелектуалното състояние на българина. Огромната дупка няма как да се запълни с допълнителните часове практика. Комплексите, ниския интелект, липсата на градивни критерии и отговорност убиват психически в ежедневието и за жалост физически на пътя.",
 
                                     // WRONGLY predicted - 0 up, 9 down
-                                    "Oчаквам скоро да го отровят с Полоний 210, подобно на Литвиненко."
+                                    "Oчаквам скоро да го отровят с Полоний 210, подобно на Литвиненко.",
                                 };
 
             TestModel(modelFile, testModelData);
@@ -83,7 +83,7 @@
                 .Append(context.Transforms.CopyColumns("Features", "Content_tf"))
                 .Append(context.Transforms.NormalizeMinMax("Features", "Features")).AppendCacheCheckpoint(context);
 
-            // Set the training algorithm 
+            // Set the training algorithm
             var trainer = context.BinaryClassification.Trainers.LbfgsLogisticRegression(
                 new LbfgsLogisticRegressionBinaryTrainer.Options
                 {
@@ -95,10 +95,10 @@
                     InitialWeightsDiameter = 0.9147193f,
                     DenseOptimizer = true,
                     LabelColumnName = nameof(ModelInput.IsPositive),
-                    FeatureColumnName = "Features"
+                    FeatureColumnName = "Features",
                 });
             var trainingPipeline = dataProcessPipeline.Append(trainer);
-            
+
             // Train Model
             ITransformer model = trainingPipeline.Fit(trainingDataView);
 

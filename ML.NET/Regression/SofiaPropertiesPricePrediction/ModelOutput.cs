@@ -1,4 +1,4 @@
-namespace SofiaPropertiesPricePrediction
+﻿namespace SofiaPropertiesPricePrediction
 {
     public class ModelOutput
     {

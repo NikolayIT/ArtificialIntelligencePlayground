@@ -46,7 +46,7 @@
 
         private static void TrainModel(string dataFile, string modelFile)
         {
-            // Create MLContext to be shared across the model creation workflow objects 
+            // Create MLContext to be shared across the model creation workflow objects
             var context = new MLContext(seed: 0);
 
             // Loading the data
@@ -61,7 +61,7 @@
             // Create the selected training algorithm/trainer
             Console.WriteLine("Create and configure the selected training algorithm (trainer)");
             var trainer = context.MulticlassClassification.Trainers.SdcaMaximumEntropy(); // SDCA = Stochastic Dual Coordinate Ascent
-            // Alternative: LightGbm (GBM = Gradient Boosting Machine)
+            //// Alternative: LightGbm (GBM = Gradient Boosting Machine)
 
             // Set the trainer/algorithm and map label to value (original readable state)
             var trainingPipeline = dataProcessPipeline.Append(trainer).Append(
