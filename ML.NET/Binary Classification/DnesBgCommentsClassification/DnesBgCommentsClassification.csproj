@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.ML" Version="1.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="all.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
