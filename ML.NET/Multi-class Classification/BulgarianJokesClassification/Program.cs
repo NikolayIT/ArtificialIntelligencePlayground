@@ -19,7 +19,7 @@
              * Removed category "Разни"
              * Removed categories with less than 20 jokes
              *
-             * 24771 jokes in the data file (jokes-train-data.csv)
+             * jokes-train-data.csv: 24771 jokes in 167 categories
              */
 
             Console.OutputEncoding = Encoding.UTF8;
@@ -42,21 +42,6 @@
                                     };
 
             TestModel(modelFile, testModelData);
-        }
-
-        private static void TestModel(string modelFile, IEnumerable<string> testModelData)
-        {
-            var context = new MLContext();
-            var model = context.Model.Load(modelFile, out _);
-            var predictionEngine = context.Model.CreatePredictionEngine<JokeModel, JokeModelPrediction>(model);
-            foreach (var testData in testModelData)
-            {
-                var prediction = predictionEngine.Predict(new JokeModel { Content = testData });
-                Console.WriteLine(new string('-', 60));
-                Console.WriteLine($"Content: {testData}");
-                Console.WriteLine($"Prediction: {prediction.Category}");
-                Console.WriteLine($"Score: {prediction.Score.Max()}");
-            }
         }
 
         private static void TrainModel(string dataFile, string modelFile)
@@ -89,6 +74,21 @@
             // Save/persist the trained model to a .ZIP file
             Console.WriteLine($"Save the model to a file ({modelFile})");
             context.Model.Save(trainedModel, trainingDataView.Schema, modelFile);
+        }
+
+        private static void TestModel(string modelFile, IEnumerable<string> testModelData)
+        {
+            var context = new MLContext();
+            var model = context.Model.Load(modelFile, out _);
+            var predictionEngine = context.Model.CreatePredictionEngine<JokeModel, JokeModelPrediction>(model);
+            foreach (var testData in testModelData)
+            {
+                var prediction = predictionEngine.Predict(new JokeModel { Content = testData });
+                Console.WriteLine(new string('-', 60));
+                Console.WriteLine($"Content: {testData}");
+                Console.WriteLine($"Prediction: {prediction.Category}");
+                Console.WriteLine($"Score: {prediction.Score.Max()}");
+            }
         }
     }
 }

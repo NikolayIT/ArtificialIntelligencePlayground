@@ -2,6 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
+    using System.Net;
     using System.Text;
 
     using Microsoft.ML;
@@ -26,7 +28,10 @@
 
             Console.OutputEncoding = Encoding.UTF8;
             var modelFile = "SofiaPropertiesModel.zip";
-            TrainModel("imot.bg-2019-07-06.csv", modelFile);
+            if (!File.Exists(modelFile))
+            {
+                TrainModel("imot.bg-2019-07-06.csv", modelFile);
+            }
 
             var testModelData = new List<ModelInput>
                                 {
@@ -122,7 +127,7 @@
                         "Features",
                         new[] { "District", "Type", "BuildingType", "Size", "Floor", "TotalFloors", "Year" }));
 
-            // Set the training algorithm 
+            // Set the training algorithm (GBM = Gradient Boosting Machine)
             var trainer = mlContext.Regression.Trainers.LightGbm(
                 new LightGbmRegressionTrainer.Options
                 {
