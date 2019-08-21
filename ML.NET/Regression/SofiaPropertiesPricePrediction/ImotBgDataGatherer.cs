@@ -41,7 +41,7 @@
                     var listItems = pageDocument.QuerySelectorAll("a.photoLink").Where(
                         x => x.Attributes["href"]?.Value?.Contains("pcgi/imot.cgi?act=5&adv=") == true).ToList();
 
-                    if (!properties.Any())
+                    if (!listItems.Any())
                     {
                         break;
                     }
