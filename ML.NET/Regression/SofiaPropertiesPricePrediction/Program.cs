@@ -2,7 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.IO;
+    using System.Linq;
     using System.Text;
 
     using Microsoft.ML;
@@ -16,7 +18,14 @@
         {
             /*
              * Source: https://www.imot.bg/
-             * var properties = new ImotBgDataGatherer().GatherData(10, 1000).GetAwaiter().GetResult();
+             * var properties = new ImotBgDataGatherer().GatherData(1, 1000).GetAwaiter().GetResult();
+             *
+             * using var csvWriter = new CsvWriter(File.CreateText($"imot.bg-raw-data-{DateTime.Now:yyyy-MM-dd}.csv"), CultureInfo.InvariantCulture);
+             * csvWriter.WriteRecords(properties);
+             *
+             * File.WriteAllText(
+                $"imot.bg-raw-data-{DateTime.Now:yyyy-MM-dd}.json",
+                JsonConvert.SerializeObject(properties));
              *
              * 24228 records in imot.bg-raw-data-2019-07-06.csv
              *
