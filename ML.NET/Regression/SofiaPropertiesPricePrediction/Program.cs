@@ -7,6 +7,8 @@
     using System.Linq;
     using System.Text;
 
+    using CsvHelper;
+
     using Microsoft.ML;
     using Microsoft.ML.Trainers.LightGbm;
 
@@ -20,7 +22,7 @@
              * Source: https://www.imot.bg/
              * var properties = new ImotBgDataGatherer().GatherData(1, 1000).GetAwaiter().GetResult();
              *
-             * using var csvWriter = new CsvWriter(File.CreateText($"imot.bg-raw-data-{DateTime.Now:yyyy-MM-dd}.csv"), CultureInfo.InvariantCulture);
+             * using var csvWriter = new CsvWriter(new StreamWriter(File.OpenWrite($"imot.bg-raw-data-{DateTime.Now:yyyy-MM-dd}.csv"), Encoding.UTF8), CultureInfo.CurrentCulture);
              * csvWriter.WriteRecords(properties);
              *
              * File.WriteAllText(

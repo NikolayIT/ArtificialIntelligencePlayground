@@ -26,11 +26,14 @@
             for (var size = fromSize; size <= toSize; size++)
             {
                 Console.Write($"Area {size}: ");
-                var formData =
+
+                var formDataApartments =
                     $"act=3&rub=1&rub_pub_save=1&topmenu=2&actions=1&f0=127.0.0.1&f1=1&f2=&f3=&f4=1&f7=1%7E2%7E3%7E4%7E5%7E6%7E8%7E&f28=&f29=&f43=&f44=&f30=EUR&f26={size}&f27={size}&f41=1&f31=&f32=&f38=%E3%F0%E0%E4+%D1%EE%F4%E8%FF&f42=&f39=&f40=&fe3=&fe4=&f45=&f46=&f51=&f52=&f33=&f34=&f35=&f36=&f37=&fe2=1";
+                var formDataHouses =
+                    $"act=3&rub=1&rub_pub_save=1&topmenu=2&actions=1&f0=127.0.0.1&f1=1&f2=&f3=&f4=1&f7=10%7E&f28=&f29=&f43=&f44=&f30=EUR&f26={size}&f27={size}&f41=1&f31=&f32=&f54=&f38=%E3%F0%E0%E4+%D1%EE%F4%E8%FF&f42=&f39=&f40=&fe3=&fe4=&f45=&f46=&f51=&f52=&f33=&f34=&f35=&f36=&f37=&fe2=1";
                 var response = await client.PostAsync(
                                    "https://www.imot.bg/pcgi/imot.cgi",
-                                   new StringContent(formData, Encoding.UTF8, "application/x-www-form-urlencoded"));
+                                   new StringContent(formDataApartments, Encoding.UTF8, "application/x-www-form-urlencoded"));
                 var firstPageUrl = response.Headers.Location;
 
                 for (var page = 1; page <= 26; page++)
