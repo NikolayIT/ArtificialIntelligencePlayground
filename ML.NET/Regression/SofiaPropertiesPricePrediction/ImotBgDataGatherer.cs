@@ -71,10 +71,15 @@
                             "<li>Строителство:</li><li>",
                             "</li>");
                         var typeAndInfoMatch = typeAndInfoRegex.Match(typeAndInfoString);
+                        var yardSizeString = html.GetStringBetween(
+                            "<li>Двор:</li><li>",
+                            "</li>").Replace(" кв.м", string.Empty).Trim();
+                        int.TryParse(yardSizeString, out var yardSize);
                         var property = new RawProperty
                                        {
                                            Url = url,
                                            Size = size,
+                                           YardSize = yardSize,
                                            District = district,
                                            Type =
                                                html.GetStringBetween(
@@ -120,6 +125,8 @@
             public string Url { get; set; }
 
             public int Size { get; set; }
+
+            public int YardSize { get; set; }
 
             public int Floor { get; set; }
 
