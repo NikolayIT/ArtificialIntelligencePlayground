@@ -27,6 +27,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUniCoursesRecommendatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelaBgCourtDocumentsByDateAnomalyDetection", "Anomaly Detection\DelaBgCourtDocumentsByDateAnomalyDetection\DelaBgCourtDocumentsByDateAnomalyDetection.csproj", "{C0C0D930-1BBA-4208-9F94-C761BCBE71F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnesBgCommentsBinaryClassification", "Binary Classification\DnesBgCommentsBinaryClassification\DnesBgCommentsBinaryClassification.csproj", "{73DD1FC8-77DA-4245-8254-3ABC50936A42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulgarianJokesMultiClassClassification", "Multi-class Classification\BulgarianJokesMultiClassClassification\BulgarianJokesMultiClassClassification.csproj", "{D5A1A0E0-2554-49A0-95C3-FD3B6EF0069D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SofiaPropertiesPricePredictionWithRegression", "Regression\SofiaPropertiesPricePredictionWithRegression\SofiaPropertiesPricePredictionWithRegression.csproj", "{50B07C51-B084-4D9B-BAE4-8E5863FB550B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCategorizerDemo", "Computer Vision\ImageCategorizerDemo\ImageCategorizerDemo.csproj", "{97FAE585-13EE-486A-9E2F-73DAC7DD409D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +61,22 @@ Global
 		{C0C0D930-1BBA-4208-9F94-C761BCBE71F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0C0D930-1BBA-4208-9F94-C761BCBE71F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0C0D930-1BBA-4208-9F94-C761BCBE71F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DD1FC8-77DA-4245-8254-3ABC50936A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73DD1FC8-77DA-4245-8254-3ABC50936A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73DD1FC8-77DA-4245-8254-3ABC50936A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73DD1FC8-77DA-4245-8254-3ABC50936A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5A1A0E0-2554-49A0-95C3-FD3B6EF0069D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A1A0E0-2554-49A0-95C3-FD3B6EF0069D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A1A0E0-2554-49A0-95C3-FD3B6EF0069D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5A1A0E0-2554-49A0-95C3-FD3B6EF0069D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B07C51-B084-4D9B-BAE4-8E5863FB550B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B07C51-B084-4D9B-BAE4-8E5863FB550B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B07C51-B084-4D9B-BAE4-8E5863FB550B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B07C51-B084-4D9B-BAE4-8E5863FB550B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97FAE585-13EE-486A-9E2F-73DAC7DD409D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FAE585-13EE-486A-9E2F-73DAC7DD409D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FAE585-13EE-486A-9E2F-73DAC7DD409D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FAE585-13EE-486A-9E2F-73DAC7DD409D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +87,10 @@ Global
 		{284A2527-9E1C-4298-A63B-33C5FEAF34B5} = {1947B2AB-DB16-46CF-8046-20233D4CC884}
 		{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7} = {EF141B78-9A51-41C5-8EAF-9FD33ADDF84B}
 		{C0C0D930-1BBA-4208-9F94-C761BCBE71F6} = {4DC31086-D4CE-41B3-A84B-D7DDF5554CE7}
+		{73DD1FC8-77DA-4245-8254-3ABC50936A42} = {AAFDB102-6291-40E4-BBCA-DC27EC30FA4B}
+		{D5A1A0E0-2554-49A0-95C3-FD3B6EF0069D} = {D2056778-0E8F-4410-B63B-493D56910441}
+		{50B07C51-B084-4D9B-BAE4-8E5863FB550B} = {1947B2AB-DB16-46CF-8046-20233D4CC884}
+		{97FAE585-13EE-486A-9E2F-73DAC7DD409D} = {1F0D33E3-795E-4AC1-8586-2C5B62D08BF2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F679EB71-B549-4032-BB67-BD9F1AEC1203}
