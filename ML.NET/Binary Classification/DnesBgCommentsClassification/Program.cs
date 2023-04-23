@@ -18,10 +18,10 @@
              * var comments = new DnesBgDataGatherer().GatherData(415500, 1).GetAwaiter().GetResult();
              * All comments:
              *
-             * Positive comments:
+             * Negative comments:
              * WHERE [DownVotes] >= 10 AND (1.0 * [UpVotes]) / [DownVotes] <= 0.2   -- down >= 5 * up
              *
-             * Negative comments:
+             * Positive comments:
              * WHERE [UpVotes] >= 25 AND (1.0 * [DownVotes]) / [UpVotes] <= 0.04   -- up >= 25 * down
              */
             if (!File.Exists("all.csv"))
@@ -116,7 +116,7 @@
                 var prediction = predictionEngine.Predict(new ModelInput { Content = testData });
                 Console.WriteLine(new string('-', 60));
                 Console.WriteLine($"Content: {testData}");
-                Console.WriteLine($"Is OK? {prediction.Prediction}");
+                Console.WriteLine($"Is positive? {prediction.Prediction}");
                 Console.WriteLine($"Score: {prediction.Score}");
             }
         }

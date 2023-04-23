@@ -14,7 +14,7 @@
         {
             /*
              * Source: https://fun.dir.bg/
-             * var jokes = new DataGatherer().GatherData(1, 47000);
+             * var jokes = new DataGatherer().GatherData(1, 47500);
              *
              * Removed category "Разни"
              * Removed categories with less than 20 jokes
