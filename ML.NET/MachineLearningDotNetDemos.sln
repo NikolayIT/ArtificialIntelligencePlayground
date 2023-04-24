@@ -17,8 +17,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Anomaly Detection", "Anomal
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Computer Vision", "Computer Vision", "{1F0D33E3-795E-4AC1-8586-2C5B62D08BF2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUniCoursesRecommendation", "Recommendation\SoftUniCoursesRecommendation\SoftUniCoursesRecommendation.csproj", "{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelaBgCourtDocumentsByDateAnomalyDetection", "Anomaly Detection\DelaBgCourtDocumentsByDateAnomalyDetection\DelaBgCourtDocumentsByDateAnomalyDetection.csproj", "{C0C0D930-1BBA-4208-9F94-C761BCBE71F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnesBgCommentsBinaryClassification", "Binary Classification\DnesBgCommentsBinaryClassification\DnesBgCommentsBinaryClassification.csproj", "{73DD1FC8-77DA-4245-8254-3ABC50936A42}"
@@ -37,10 +35,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C0C0D930-1BBA-4208-9F94-C761BCBE71F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C0C0D930-1BBA-4208-9F94-C761BCBE71F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0C0D930-1BBA-4208-9F94-C761BCBE71F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -70,7 +64,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7} = {EF141B78-9A51-41C5-8EAF-9FD33ADDF84B}
 		{C0C0D930-1BBA-4208-9F94-C761BCBE71F6} = {4DC31086-D4CE-41B3-A84B-D7DDF5554CE7}
 		{73DD1FC8-77DA-4245-8254-3ABC50936A42} = {AAFDB102-6291-40E4-BBCA-DC27EC30FA4B}
 		{D5A1A0E0-2554-49A0-95C3-FD3B6EF0069D} = {D2056778-0E8F-4410-B63B-493D56910441}
