@@ -1,4 +1,4 @@
-﻿namespace ImageCategorizerDemo.YoloParser
+﻿namespace ImageObjectDetectionDemo.YoloParser
 {
     using System;
     using System.Collections.Generic;

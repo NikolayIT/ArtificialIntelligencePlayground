@@ -1,19 +1,19 @@
-﻿namespace ImageCategorizerDemo
+﻿namespace ImageObjectDetectionDemo
 {
-    using ImageCategorizerDemo.YoloParser;
-    using Microsoft.ML;
-    using System.Drawing;
-    using System.Drawing.Drawing2D;
-    using SkiaSharp;
     using System;
     using System.Collections.Generic;
+    using System.Drawing;
+    using System.Drawing.Drawing2D;
     using System.IO;
     using System.Linq;
-    using System.Threading.Tasks;
+
+    using ImageObjectDetectionDemo.YoloParser;
+
+    using Microsoft.ML;
 
     public static class Program
     {
-        public static async Task Main(string[] args)
+        public static void Main()
         {
             var modelFilePath = "assets/Model/tinyyolov2-8.onnx";
             var imagesFolder = "assets/images";
@@ -57,17 +57,6 @@
             {
                 Console.WriteLine(ex.ToString());
             }
-        }
-
-
-        private static string GetAbsolutePath(string relativePath)
-        {
-            FileInfo _dataRoot = new FileInfo(typeof(Program).Assembly.Location);
-            string assemblyFolderPath = _dataRoot.Directory.FullName;
-
-            string fullPath = Path.Combine(assemblyFolderPath, relativePath);
-
-            return fullPath;
         }
 
         private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)

@@ -1,9 +1,9 @@
-﻿namespace ImageCategorizerDemo
+﻿namespace ImageObjectDetectionDemo
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using ImageCategorizerDemo.YoloParser;
+    using ImageObjectDetectionDemo.YoloParser;
     using Microsoft.ML;
     using Microsoft.ML.Data;
 

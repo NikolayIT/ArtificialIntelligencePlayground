@@ -1,4 +1,4 @@
-﻿namespace ImageCategorizerDemo
+﻿namespace ImageObjectDetectionDemo
 {
     using Microsoft.ML.Data;
     using System.Collections.Generic;

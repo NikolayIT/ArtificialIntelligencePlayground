@@ -29,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulgarianJokesMultiClassCla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SofiaPropertiesPricePredictionWithRegression", "Regression\SofiaPropertiesPricePredictionWithRegression\SofiaPropertiesPricePredictionWithRegression.csproj", "{50B07C51-B084-4D9B-BAE4-8E5863FB550B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCategorizerDemo", "Computer Vision\ImageCategorizerDemo\ImageCategorizerDemo.csproj", "{97FAE585-13EE-486A-9E2F-73DAC7DD409D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageObjectDetectionDemo", "Computer Vision\ImageObjectDetectionDemo\ImageObjectDetectionDemo.csproj", "{97FAE585-13EE-486A-9E2F-73DAC7DD409D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
