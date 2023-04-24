@@ -1,7 +1,5 @@
 ﻿namespace BulgarianJokesMultiClassClassification.Data
 {
-    using Microsoft.ML.Data;
-
     public class Joke
     {
         public int Id { get; set; }
