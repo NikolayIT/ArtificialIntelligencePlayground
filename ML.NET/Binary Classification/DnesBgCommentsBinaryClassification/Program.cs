@@ -20,7 +20,7 @@
          * WHERE [DownVotes] >= 15 AND (1.0 * [UpVotes]) / [DownVotes] <= 0.2   -- down >= 5 * up
          *
          * Positive comments:
-         * WHERE [UpVotes] >= 30 AND (1.0 * [DownVotes]) / [UpVotes] <= 0.04   -- up >= 25 * down
+         * WHERE [UpVotes] >= 30 AND (1.0 * [DownVotes]) / [UpVotes] <= 0.05   -- up >= 20 * down
          */
         public static void Main()
         {
@@ -53,12 +53,12 @@
         public static void TrainModel(string dataFile, string modelFile)
         {
             var context = new MLContext();
-            IDataView dataView = context.Data.LoadFromTextFile<SentimentData>(
+            IDataView dataView = context.Data.LoadFromTextFile<ModelInput>(
                 dataFile,
                 hasHeader: true,
                 separatorChar: ',',
                 allowQuoting: true);
-            var estimator = context.Transforms.Text.FeaturizeText(outputColumnName: "Features", inputColumnName: nameof(SentimentData.SentimentText))
+            var estimator = context.Transforms.Text.FeaturizeText(outputColumnName: "Features", inputColumnName: nameof(ModelInput.SentimentText))
                 .Append(context.BinaryClassification.Trainers.SdcaLogisticRegression(labelColumnName: "Label", featureColumnName: "Features"));
             var model = estimator.Fit(dataView);
             context.Model.Save(model, dataView.Schema, modelFile);
@@ -68,10 +68,10 @@
         {
             var context = new MLContext();
             var model = context.Model.Load(modelFile, out _);
-            var predictionEngine = context.Model.CreatePredictionEngine<SentimentData, SentimentPrediction>(model);
+            var predictionEngine = context.Model.CreatePredictionEngine<ModelInput, ModelOutput>(model);
             foreach (var testData in testModelData)
             {
-                var prediction = predictionEngine.Predict(new SentimentData { SentimentText = testData });
+                var prediction = predictionEngine.Predict(new ModelInput { SentimentText = testData });
                 Console.WriteLine(new string('-', 60));
                 Console.WriteLine($"Content: {testData}");
                 Console.WriteLine($"Is positive? {prediction.Prediction}");
@@ -80,6 +80,7 @@
         }
     }
 }
+
 /*
 SELECT Content AS SentimentText,
 	CAST(CASE

@@ -17,19 +17,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Anomaly Detection", "Anomal
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Computer Vision", "Computer Vision", "{1F0D33E3-795E-4AC1-8586-2C5B62D08BF2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnesBgCommentsClassification", "Binary Classification\DnesBgCommentsClassification\DnesBgCommentsClassification.csproj", "{9A28F8FF-0819-455A-AA53-392AECFB4368}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUniCoursesRecommendation", "Recommendation\SoftUniCoursesRecommendation\SoftUniCoursesRecommendation.csproj", "{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelaBgCourtDocumentsByDateAnomalyDetection", "Anomaly Detection\DelaBgCourtDocumentsByDateAnomalyDetection\DelaBgCourtDocumentsByDateAnomalyDetection.csproj", "{C0C0D930-1BBA-4208-9F94-C761BCBE71F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelaBgCourtDocumentsByDateAnomalyDetection", "Anomaly Detection\DelaBgCourtDocumentsByDateAnomalyDetection\DelaBgCourtDocumentsByDateAnomalyDetection.csproj", "{C0C0D930-1BBA-4208-9F94-C761BCBE71F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnesBgCommentsBinaryClassification", "Binary Classification\DnesBgCommentsBinaryClassification\DnesBgCommentsBinaryClassification.csproj", "{73DD1FC8-77DA-4245-8254-3ABC50936A42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnesBgCommentsBinaryClassification", "Binary Classification\DnesBgCommentsBinaryClassification\DnesBgCommentsBinaryClassification.csproj", "{73DD1FC8-77DA-4245-8254-3ABC50936A42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulgarianJokesMultiClassClassification", "Multi-class Classification\BulgarianJokesMultiClassClassification\BulgarianJokesMultiClassClassification.csproj", "{D5A1A0E0-2554-49A0-95C3-FD3B6EF0069D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BulgarianJokesMultiClassClassification", "Multi-class Classification\BulgarianJokesMultiClassClassification\BulgarianJokesMultiClassClassification.csproj", "{D5A1A0E0-2554-49A0-95C3-FD3B6EF0069D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SofiaPropertiesPricePredictionWithRegression", "Regression\SofiaPropertiesPricePredictionWithRegression\SofiaPropertiesPricePredictionWithRegression.csproj", "{50B07C51-B084-4D9B-BAE4-8E5863FB550B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SofiaPropertiesPricePredictionWithRegression", "Regression\SofiaPropertiesPricePredictionWithRegression\SofiaPropertiesPricePredictionWithRegression.csproj", "{50B07C51-B084-4D9B-BAE4-8E5863FB550B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageObjectDetectionDemo", "Computer Vision\ImageObjectDetectionDemo\ImageObjectDetectionDemo.csproj", "{97FAE585-13EE-486A-9E2F-73DAC7DD409D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageObjectDetectionDemo", "Computer Vision\ImageObjectDetectionDemo\ImageObjectDetectionDemo.csproj", "{97FAE585-13EE-486A-9E2F-73DAC7DD409D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUniNextCoursesRecommendation", "Recommendation\SoftUniNextCoursesRecommendation\SoftUniNextCoursesRecommendation.csproj", "{1FDC99E4-97AE-48F7-9AE4-F2FCAAA7258E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9A28F8FF-0819-455A-AA53-392AECFB4368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A28F8FF-0819-455A-AA53-392AECFB4368}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A28F8FF-0819-455A-AA53-392AECFB4368}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A28F8FF-0819-455A-AA53-392AECFB4368}.Release|Any CPU.Build.0 = Release|Any CPU
 		{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -65,18 +61,22 @@ Global
 		{97FAE585-13EE-486A-9E2F-73DAC7DD409D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97FAE585-13EE-486A-9E2F-73DAC7DD409D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97FAE585-13EE-486A-9E2F-73DAC7DD409D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FDC99E4-97AE-48F7-9AE4-F2FCAAA7258E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FDC99E4-97AE-48F7-9AE4-F2FCAAA7258E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FDC99E4-97AE-48F7-9AE4-F2FCAAA7258E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FDC99E4-97AE-48F7-9AE4-F2FCAAA7258E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9A28F8FF-0819-455A-AA53-392AECFB4368} = {AAFDB102-6291-40E4-BBCA-DC27EC30FA4B}
 		{44FD08FD-2D3A-4BB0-83D4-DE0F761610C7} = {EF141B78-9A51-41C5-8EAF-9FD33ADDF84B}
 		{C0C0D930-1BBA-4208-9F94-C761BCBE71F6} = {4DC31086-D4CE-41B3-A84B-D7DDF5554CE7}
 		{73DD1FC8-77DA-4245-8254-3ABC50936A42} = {AAFDB102-6291-40E4-BBCA-DC27EC30FA4B}
 		{D5A1A0E0-2554-49A0-95C3-FD3B6EF0069D} = {D2056778-0E8F-4410-B63B-493D56910441}
 		{50B07C51-B084-4D9B-BAE4-8E5863FB550B} = {1947B2AB-DB16-46CF-8046-20233D4CC884}
 		{97FAE585-13EE-486A-9E2F-73DAC7DD409D} = {1F0D33E3-795E-4AC1-8586-2C5B62D08BF2}
+		{1FDC99E4-97AE-48F7-9AE4-F2FCAAA7258E} = {EF141B78-9A51-41C5-8EAF-9FD33ADDF84B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F679EB71-B549-4032-BB67-BD9F1AEC1203}
