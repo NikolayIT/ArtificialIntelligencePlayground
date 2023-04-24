@@ -1,4 +1,4 @@
-﻿namespace SofiaPropertiesPricePrediction
+﻿namespace SofiaPropertiesPricePredictionWithRegression
 {
     using Microsoft.ML.Data;
 
