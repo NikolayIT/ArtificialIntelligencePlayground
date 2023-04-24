@@ -13,20 +13,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="assets\images\output\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="assets\images\image1.jpg">
+    <None Update="assets\images\karakachan-dog.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="assets\images\image2.jpg">
+    <None Update="assets\images\boyko-and-putin.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="assets\images\image3.jpg">
+    <None Update="assets\images\cars.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="assets\images\image4.jpg">
+    <None Update="assets\images\sheep.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="assets\Model\tinyyolov2-8.onnx">

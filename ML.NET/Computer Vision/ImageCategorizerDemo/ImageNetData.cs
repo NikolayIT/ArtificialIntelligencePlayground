@@ -1,4 +1,4 @@
-﻿namespace ImageCategorizerDemo.DataStructures
+﻿namespace ImageCategorizerDemo
 {
     using Microsoft.ML.Data;
     using System.Collections.Generic;
@@ -8,10 +8,10 @@
     public class ImageNetData
     {
         [LoadColumn(0)]
-        public string ImagePath;
+        public string ImagePath { get; set; }
 
         [LoadColumn(1)]
-        public string Label;
+        public string Label { get; set; }
 
         public static IEnumerable<ImageNetData> ReadFromFile(string imageFolder)
         {

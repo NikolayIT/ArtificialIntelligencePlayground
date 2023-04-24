@@ -35,27 +35,10 @@
 
         private static Color[] classColors = new Color[]
         {
-            Color.Khaki,
-            Color.Fuchsia,
-            Color.Silver,
-            Color.RoyalBlue,
-            Color.Purple,
-            Color.DarkOrange,
-            Color.Gold,
-            Color.Green,
-            Color.Red,
-            Color.Aquamarine,
-            Color.Lime,
-            Color.AliceBlue,
-            Color.Sienna,
-            Color.Orchid,
-            Color.Tan,
-            Color.LightPink,
-            Color.Yellow,
-            Color.HotPink,
-            Color.OliveDrab,
-            Color.SandyBrown,
-            Color.DarkTurquoise
+            Color.Khaki, Color.Fuchsia, Color.Silver, Color.RoyalBlue, Color.Purple,
+            Color.DarkOrange, Color.Gold, Color.Green, Color.Red, Color.Aquamarine,
+            Color.Lime, Color.AliceBlue, Color.Sienna, Color.Orchid, Color.Tan,
+            Color.LightPink, Color.Yellow, Color.HotPink, Color.OliveDrab, Color.SandyBrown,
         };
 
         private float Sigmoid(float value)
@@ -245,6 +228,5 @@
             }
             return results;
         }
-
     }
 }

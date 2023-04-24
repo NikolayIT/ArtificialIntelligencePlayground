@@ -10,7 +10,6 @@
     using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
-    using ImageCategorizerDemo.DataStructures;
 
     public static class Program
     {
@@ -18,7 +17,7 @@
         {
             var modelFilePath = "assets/Model/tinyyolov2-8.onnx";
             var imagesFolder = "assets/images";
-            var outputFolder = "assets/images/output";
+            var outputFolder = "assets/output";
 
             // Initialize MLContext
             MLContext mlContext = new MLContext();
@@ -58,8 +57,6 @@
             {
                 Console.WriteLine(ex.ToString());
             }
-
-            Console.WriteLine("========= End of Process..Hit any Key ========");
         }
 
 
@@ -95,7 +92,7 @@
                 height = (uint)originalImageHeight * height / OnnxModelScorer.ImageNetSettings.imageHeight;
 
                 // Bounding Box Text
-                string text = $"{box.Label} ({(box.Confidence * 100).ToString("0")}%)";
+                string text = $"{box.Label} ({(box.Confidence * 100).ToString("0.0")}%)";
 
                 using (Graphics thumbnailGraphic = Graphics.FromImage(image))
                 {
@@ -132,11 +129,11 @@
 
         private static void LogDetectedObjects(string imageName, IList<YoloBoundingBox> boundingBoxes)
         {
-            Console.WriteLine($".....The objects in the image {imageName} are detected as below....");
+            Console.WriteLine($"The objects in the image \"{imageName}\" are detected as below:");
 
             foreach (var box in boundingBoxes)
             {
-                Console.WriteLine($"{box.Label} and its Confidence score: {box.Confidence}");
+                Console.WriteLine($"- {box.Label} with confidence score: {box.Confidence}");
             }
 
             Console.WriteLine("");

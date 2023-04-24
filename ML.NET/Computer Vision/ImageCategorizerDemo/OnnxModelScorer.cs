@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using ImageCategorizerDemo.DataStructures;
     using ImageCategorizerDemo.YoloParser;
     using Microsoft.ML;
     using Microsoft.ML.Data;
