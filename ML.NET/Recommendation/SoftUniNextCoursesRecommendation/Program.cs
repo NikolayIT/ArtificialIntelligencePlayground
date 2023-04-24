@@ -28,6 +28,7 @@ namespace SoftUniNextCoursesRecommendation
             // Train model
             var modelFile = "SoftUniCoursesModel.zip";
             TrainModel(@"Data\softuni-users-2023-04-24.csv", modelFile);
+            Console.WriteLine("Model ready.");
 
             // Test model
             var courses = new Dictionary<int, string>();
@@ -37,7 +38,8 @@ namespace SoftUniNextCoursesRecommendation
                 courses = csv.GetRecords<Course>().ToDictionary(x => x.CourseId, x => x.CourseName);
             }
 
-            Console.WriteLine("UserId 50000 => Python Advanced, Python OOP, Python Web Basics");
+            Console.WriteLine();
+            Console.WriteLine("User with courses \"Python Advanced\", \"Python OOP\" and \"Python Web Basics\":");
             TestModel(modelFile, new List<ModelInput>
                              {
                                  new ModelInput { UserId = 50000, CourseId = 465 }, // Python Web Framework
@@ -45,7 +47,7 @@ namespace SoftUniNextCoursesRecommendation
                                  new ModelInput { UserId = 50000, CourseId = 450 }, // JS Advanced
                              }, courses);
             Console.WriteLine();
-            Console.WriteLine("UserId = 100000 => C# Advanced, C# OOP, MS SQL, EF Core");
+            Console.WriteLine("User with courses \"C# Advanced\", \"C# OOP\", \"MS SQL\" and \"EF Core\"");
             TestModel(modelFile, new List<ModelInput>
                              {
                                  new ModelInput { UserId = 100000, CourseId = 538 }, // ASP.NET Core
@@ -78,6 +80,7 @@ namespace SoftUniNextCoursesRecommendation
                 Alpha = 0.1,
                 Lambda = 0.5,
                 NumberOfIterations = 100,
+                Quiet = true,
             };
 
             var trainerEstimator = estimator.Append(context.Recommendation().Trainers.MatrixFactorization(options));

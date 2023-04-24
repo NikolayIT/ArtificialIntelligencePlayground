@@ -18,7 +18,7 @@
             MLContext mlContext = new MLContext();
 
             // Load the data
-            IDataView dataView = mlContext.Data.LoadFromTextFile<DocumentsByDate>(
+            IDataView dataView = mlContext.Data.LoadFromTextFile<ModelInput>(
                 path: "dela.bg documents count.csv",
                 hasHeader: true,
                 separatorChar: ',');
@@ -26,7 +26,7 @@
             // Detect period on the given series.
             int period = mlContext.AnomalyDetection.DetectSeasonality
                 (dataView,
-                nameof(DocumentsByDate.Count));
+                nameof(ModelInput.Count));
             Console.WriteLine("Period of the series is: {0}.", period);
 
             // Setup the parameters
@@ -41,18 +41,18 @@
             // Invoke SrCnn algorithm to detect anomaly on the entire series.
             var outputDataView = mlContext.AnomalyDetection.DetectEntireAnomalyBySrCnn(
                 dataView,
-                nameof(PredictionResult.Prediction),
-                nameof(DocumentsByDate.Count),
+                nameof(ModelOutput.Prediction),
+                nameof(ModelInput.Count),
                 options);
 
             // Get the detection results as an IEnumerable
-            var predictions = mlContext.Data.CreateEnumerable<PredictionResult>(
+            var predictions = mlContext.Data.CreateEnumerable<ModelOutput>(
                 outputDataView, reuseRowObject: false);
 
             // Print out the detection results
             int index = 0;
-            var columnCount = dataView.GetColumn<double>(nameof(DocumentsByDate.Count)).ToArray();
-            var columnDate = dataView.GetColumn<DateTime>(nameof(DocumentsByDate.DocumentDate)).ToArray();
+            var columnCount = dataView.GetColumn<double>(nameof(ModelInput.Count)).ToArray();
+            var columnDate = dataView.GetColumn<DateTime>(nameof(ModelInput.DocumentDate)).ToArray();
             foreach (var prediction in predictions)
             {
                 if (prediction.Prediction[0] == 1)

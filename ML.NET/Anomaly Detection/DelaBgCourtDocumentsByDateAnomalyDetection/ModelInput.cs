@@ -3,7 +3,7 @@
     using Microsoft.ML.Data;
     using System;
 
-    public class DocumentsByDate
+    public class ModelInput
     {
         [LoadColumn(0)]
         public DateTime DocumentDate { get; set; }

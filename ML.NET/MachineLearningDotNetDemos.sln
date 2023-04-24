@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recommendation", "Recommend
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Regression", "Regression", "{1947B2AB-DB16-46CF-8046-20233D4CC884}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clustering", "Clustering", "{D2C015BE-CDAE-41A9-95E9-C4344BAF36E9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Anomaly Detection", "Anomaly Detection", "{4DC31086-D4CE-41B3-A84B-D7DDF5554CE7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Computer Vision", "Computer Vision", "{1F0D33E3-795E-4AC1-8586-2C5B62D08BF2}"

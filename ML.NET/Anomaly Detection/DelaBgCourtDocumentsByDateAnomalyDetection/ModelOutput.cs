@@ -2,7 +2,7 @@
 {
     using Microsoft.ML.Data;
 
-    public class PredictionResult
+    public class ModelOutput
     {
         /// <summary>
         /// Gets or sets a vector containing 4 elements:
