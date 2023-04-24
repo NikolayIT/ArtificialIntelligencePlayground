@@ -7,7 +7,7 @@
         [LoadColumn(0)]
         public string SentimentText;
 
-        [LoadColumn(1)]
+        [LoadColumn(1), ColumnName("Label")]
         public bool Sentiment;
     }
 }

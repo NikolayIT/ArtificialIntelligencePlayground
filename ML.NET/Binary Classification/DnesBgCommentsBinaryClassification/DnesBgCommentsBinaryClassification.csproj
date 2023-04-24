@@ -12,4 +12,10 @@
     <PackageReference Include="Microsoft.ML" Version="2.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Data\dnes.bg-2023-04-23.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
