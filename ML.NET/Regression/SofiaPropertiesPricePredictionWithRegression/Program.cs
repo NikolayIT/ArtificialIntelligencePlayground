@@ -11,17 +11,17 @@
     using Microsoft.ML;
     using System.Text.Encodings.Web;
 
+    /*
+     * Source: https://www.imot.bg/
+     * await new ImotBgDataGatherer().GatherAllDataAndSaveToDatabaseAsync("Server=.;Database=MlNetDataProperties;Integrated Security=True;TrustServerCertificate=True", 10, 1000);
+     *
+     * 23018 records in imot.bg-raw-data-2023-04-23.csv
+     *
+     * 18775 records in imot.bg-2023-04-23.csv
+     * (WHERE [Price] > 0 AND [Year] > 0 AND [Floor] > 0 AND [TotalFloors] > 0 AND Size < 500)
+     */
     public static class Program
     {
-        /*
-         * Source: https://www.imot.bg/
-         * await new ImotBgDataGatherer().GatherAllDataAndSaveToDatabaseAsync("Server=.;Database=MlNetDataProperties;Integrated Security=True;TrustServerCertificate=True", 10, 1000);
-         *
-         * 23018 records in imot.bg-raw-data-2023-04-23.csv
-         *
-         * 18775 records in imot.bg-2023-04-23.csv
-         * (WHERE [Price] > 0 AND [Year] > 0 AND [Floor] > 0 AND [TotalFloors] > 0 AND Size < 500)
-         */
         public static void Main()
         {
             Console.OutputEncoding = Encoding.UTF8;

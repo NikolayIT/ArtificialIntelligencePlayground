@@ -10,17 +10,17 @@ using System.Linq;
 
 namespace SoftUniNextCoursesRecommendation
 {
+    /*
+     * Source: SoftUni
+     *
+     * softuni-users-2023-04-24.csv
+     * UserId,CourseId
+     *
+     * softuni-courses-2023-04-24.csv
+     * CourseId,CourseName
+     */
     public static class Program
     {
-        /*
-         * Source: SoftUni
-         *
-         * softuni-users-2023-04-24.csv
-         * UserId,CourseId
-         *
-         * softuni-courses-2023-04-24.csv
-         * CourseId,CourseName
-         */
         public static void Main()
         {
             Console.OutputEncoding = Encoding.UTF8;
