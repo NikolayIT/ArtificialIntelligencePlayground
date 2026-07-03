@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LLamaSharp" Version="0.4.2-preview" />
+    <PackageReference Include="LLamaSharp.Backend.Cpu" Version="0.4.2-preview" />
+    <PackageReference Include="LLamaSharp.Backend.Cuda12" Version="0.4.2-preview" />
+  </ItemGroup>
+
+</Project>
